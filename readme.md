@@ -1,6 +1,6 @@
 **Online Pharmacy website**
 
-Made with MEVN stack - ***MongoDB, Express, Vue and Node***.
+Made with MEVN stack - ***MongoDB, Express, Vue*** and ***Node***.
 ![arquitetura](./mevn_architecture.png)
 
 ### How to install:
