@@ -1,0 +1,75 @@
+
+<div class="container pt-3">
+    <div class="card">
+        <div class="card-header">
+            Invoice
+
+            <strong>{{data}}</strong>
+            <span class="float-right"> <strong>Status:</strong> Finalizado</span>
+
+        </div>
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-sm-6">
+                    <h6 class="mb-3">From:</h6>
+                    <div>
+                        <strong>ServFarm</strong>
+                    </div>
+                    <div>1DºFrente</div>
+                    <div>9500 Açores, Ponta Delgada</div>
+                    <div>Email: servfarm@gmail.com</div>
+                    <div>Phone: +35 968700718</div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h6 class="mb-3">To:</h6>
+                    <div>
+                        <strong>{{utilizador.nome}}</strong>
+                    </div>
+                    <div>Nome: {{utilizador.nome}}</div>
+                    <div>Email: {{utilizador.email}}</div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="table-responsive-sm">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th class="center">#</th>
+                        <th>Serviço</th>
+                        <th>Descrição</th>
+
+                        <th class="right">Preço por Unidade</th>
+                        <th class="center">Quantidade</th>
+                        <th class="right">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="center">1</td>
+                        <td class="left strong">{{produto.descricao}}</td>
+                        <td class="left">{{produto.nome}}</td>
+
+                        <td class="right">{{produto.preco}} €</td>
+                        <td class="center">1</td>
+                        <td class="right">{{produto.preco}}</td>
+                    </tr>
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <a href="/admin" role="button">
+                <button class="btn btn-outline-danger ml-1">Voltar</button>
+            </a>
+
+
+        </div>
+    </div>
+</div>

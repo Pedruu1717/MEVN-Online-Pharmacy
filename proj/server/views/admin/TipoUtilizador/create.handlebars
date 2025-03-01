@@ -1,0 +1,54 @@
+
+<div class="container pt-3">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin/usertype/index">Tipos de Utilizadores</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novo Tipo de Utilizador</li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center pb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header p-5 card_userTypes_css">
+                    <div class="d-flex flex-row">
+                        <h1 class="alert alert-light" style="color: #17a2b8">Novo Tipo de Utilizador</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <form action="/admin/usertype/store" method="POST">
+                            <hr class="bg-info">
+
+                            {{#each erros}}
+                                <div class="alert alert-danger">{{text}}</div>
+                            {{/each}}
+
+                            <div class="pt-2 col-md-8">
+                                <label for="nome" class="text-black-50">Nome:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Nome do tipo de Utilizador" class="form-control">
+                            </div>
+
+                            <div class="pt-2 col-md-8">
+                                <label for="codigo" class="text-black-50">Descrição:</label>
+                                <input type="text" id="descricao" name="descricao" placeholder="Descrição do Tipo de Utilizador" class="form-control">
+                            </div>
+
+                            <div class="pt-3 col-md-8">
+                                <button type="submit" class="btn btn-info float-left">Guardar <i class="far fa-save"></i></button>
+                            </div>
+
+                        </form>
+                        <a href="/admin/usertype/index" role="button">
+                            <button class="btn btn-outline-danger ml-1">Voltar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

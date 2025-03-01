@@ -1,0 +1,8 @@
+{
+  "name": "proj",
+  "template": "Default",
+  "isConfigured": {
+    "client": true,
+    "server": true
+  }
+}

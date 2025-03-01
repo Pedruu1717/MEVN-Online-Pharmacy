@@ -1,0 +1,75 @@
+<div class="container">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin/service/index">Serviços</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edição : {{servico.nome}}</li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center pb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header p-5 card_services_css">
+                    <div class="d-flex flex-row">
+                        <h1 class="alert alert-light" style="color: #17a2b8">Edição : {{servico.nome}}</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/service/update" method="POST" enctype="multipart/form-data">
+
+                        <hr class="bg-info">
+
+                        <input type="hidden" name="id" value="{{servico._id}}">
+
+                        <div class="col-md-8 form-group">
+                            <label class="form-label text-black-50" for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome" class="form-control" value="{{servico.nome}}">
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label class="form-label text-black-50" for="slug">Descrição:</label>
+                            <input type="text" id="descricao" name="descricao" placeholder="Descrição" class="form-control" value="{{servico.descricao}}">
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label class="form-label text-black-50" for="preco">Preço:</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">€</div>
+                                </div>
+                                <input type="text" id="preco" name="preco" placeholder="Preço do Serviço" class="form-control" value="{{servico.preco}}">
+                            </div>
+                        </div>
+
+                        <div class="pt-2 col-md-4 form-group">
+                            <label for="prestador" class="text-black-50">Prestador:</label>
+                            <select name="prestador" id='prestador' class="custom-select">
+                                {{#each prestadores}}
+                                    <option value="{{this._id}}">{{this.nome}}</option>
+                                {{else}}
+                                    <option value="0">Não existem Prestadores</option>
+                                {{/each}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label class="form-label text-black-50" for="imagem">Imagem:</label>
+                            <input type="file" id="imagem" name="imagem" class="form-control-file">
+                        </div>
+
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-info float-left">Guardar <i class="far fa-save"></i></button>
+                        </div>
+
+                    </form>
+                    <a href="/admin/service/index" role="button">
+                        <button class="btn btn-outline-danger ml-1">Voltar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

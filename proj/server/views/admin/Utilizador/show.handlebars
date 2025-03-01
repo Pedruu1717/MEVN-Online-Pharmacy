@@ -1,0 +1,90 @@
+<div class="container pt-3">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                {{#if admin}}
+                <li class="breadcrumb-item"><a href="/admin/user/index">Utilizadores</a></li>
+                {{/if}}
+                <li class="breadcrumb-item active" aria-current="page">{{utilizador.nome}}</li>
+            </ol>
+        </nav>
+
+    <div class="row justify-content-center pb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header p-5 card_users_css">
+                    <div class="d-flex flex-row">
+                        <h1 class="alert alert-light" style="color: #17a2b8">{{utilizador.nome}}</h1>
+                    </div>
+
+                    {{#if admin}}
+                    {{else}}
+                        <div class="d-flex flex-row">
+                            <a href="/admin/user/edit/{{utilizador._id}}">
+                                <button class="btn btn-info"><i class="far fa-edit"></i> Editar Perfil </button>
+                            </a>
+                        </div>
+                    {{/if}}
+                </div>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-info" aria-current="page" href="#">Perfil de Cliente</a>
+                    </li>
+                    {{#if admin}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/user/servicos/{{utilizador.id}}">Serviços Adquiridos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/user/products/{{utilizador.id}}">Produtos Adquiridos</a>
+                    </li>
+                    {{/if}}
+                    {{#if cliente}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/user/servicos/{{utilizador.id}}">Serviços Adquiridos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/user/products/{{utilizador.id}}">Produtos Adquiridos</a>
+                        </li>
+                    {{/if}}
+                    {{#if prestador}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/user/servicos/{{utilizador.id}}">Listagem de Clientes</a>
+                        </li>
+                    {{/if}}
+
+                </ul>
+
+                <div class="card-body">
+                    <div class="form-group">
+
+                        <hr class="bg-info">
+
+                        <input type="hidden" name="id" value="{{utilizador._id}}">
+
+                        <div class="pt-2 col-md-8">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="{{utilizador.nome}}" class="form-control" disabled>
+                        </div>
+
+                        <div class="pt-2 col-md-8">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="{{utilizador.email}}" class="form-control" disabled>
+                        </div>
+
+                        <div class="pt-3 col-md-8">
+                            {{#if admin}}
+                            <a class="btn btn-outline-danger" href="/admin/user/index" role="button">Voltar</a>
+                            {{else}}
+                                <a class="btn btn-outline-danger" href="/admin" role="button">Voltar</a>
+                            {{/if}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,107 @@
+
+.letra{
+    font-size: 50px;
+    color: #1c84e3;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.card_users_css {
+    background-image: url('http://localhost:8082/img/users.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    font-weight: 200;
+}
+
+.card_userTypes_css {
+    background-image: url('http://localhost:8082/img/tipos_utilizador.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    font-weight: 200;
+}
+
+.card_login_css {
+    background-image: url('http://localhost:8082/img/lock.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    font-weight: 200;
+}
+
+.card_services_css {
+    background-image: url('http://localhost:8082/img/services.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    font-weight: 200;
+}
+
+.carrossel_image1_css {
+    background-image: url('http://localhost:8082/img/carrossel1.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 320px;
+    font-weight: 200;
+}
+
+.carrossel_image2_css {
+    background-image: url('http://localhost:8082/img/carrossel2.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 320px;
+    font-weight: 200;
+}
+
+.carrossel_image3_css {
+    background-image: url('http://localhost:8082/img/carrossel3.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 320px;
+    font-weight: 200;
+}
+
+html, body {
+    position: relative;
+    /*#min-height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+a:hover {
+    color: #33b5e5;
+}
+
+a {
+    color: #17a2b8;
+}
+
+.footer {
+
+    position: relative;
+
+    /*height: 100px;*/
+    /*margin-top: -100px;*/
+    clear: both;
+
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+}
+
+.rowClass {
+    vertical-align:middle !important;
+    height:auto;
+}
+
+.cellClass {
+    vertical-align:middle !important;
+    height:auto;
+}
